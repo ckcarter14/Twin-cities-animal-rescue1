@@ -135,3 +135,28 @@ footer {
         flex: 1 1 45%;
     }
 }
+
+.error-message {
+    color: #b42318;
+    font-size: 14px;
+    display: block;
+    margin-top: 4px;
+}
+
+#interest-message {
+    color: #315c48;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#form-status {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #315c48;
+    outline-offset: 2px;
+}

@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html lang="en"
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twin Cities Animal Rescue - Contact</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,62 +24,83 @@
     <main>
         <section>
             <h2>Volunteer or Foster Interest</h2>
-
             <p>
-                If you are interested in volunteering or becoming a foster family,
-                please complete the form below. A member of our team will review
-                your information and follow up with you.
+                If you are interested in volunteering or becoming a foster
+                family, please complete the form below.
             </p>
+        </section>
 
-            <form>
+        <section id="interest-section">
+            <h2>How Would You Like to Help?</h2>
+            <p>Select an option to learn how you can support our rescue.</p>
+
+            <label for="interest">I'm interested in:</label>
+            <select id="interest">
+                <option value="">-- Choose an option --</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="foster">Fostering</option>
+                <option value="adoption">Adopting</option>
+            </select>
+
+            <p id="interest-message" aria-live="polite"></p>
+        </section>
+
+        <section>
+            <h2>Contact Form</h2>
+
+            <form id="contact-form" novalidate>
                 <fieldset>
                     <legend>Tell Us About Yourself</legend>
 
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
+                    <span id="name-error" class="error-message"></span>
 
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                    <span id="email-error" class="error-message"></span>
 
-                    <label for="Interest">Interest Type:</label>
-                    <select id="interest" name="interest" required>
+                    <label for="form-interest">Interest Type:</label>
+                    <select id="form-interest" name="interest" required>
                         <option value="">Please select one</option>
                         <option value="volunteer">Volunteer</option>
-                        <option value="Foster">Foster</option>
+                        <option value="foster">Foster</option>
                         <option value="adoption">Adoption Information</option>
+                    </select>
+                    <span id="form-interest-error" class="error-message"></span>
 
-                    <label for="availability">availability:</label>
+                    <label for="availability">Availability:</label>
                     <input type="text" id="availability" name="availability" required>
+                    <span id="availability-error" class="error-message"></span>
 
                     <label for="experience">Experience With Pets:</label>
                     <textarea id="experience" name="experience" rows="4" cols="40" required></textarea>
+                    <span id="experience-error" class="error-message"></span>
 
                     <label for="message">Short Message:</label>
                     <textarea id="message" name="message" rows="4" cols="40" required></textarea>
-                    </select>
+                    <span id="message-error" class="error-message"></span>
                 </fieldset>
 
                 <button type="submit">Submit</button>
-
+                <p id="form-status" role="status"></p>
             </form>
         </section>
 
         <section>
             <h2>Service Area</h2>
-
             <p>
-                Twin Cities Animal Rescue serves the Twin Cities community and surrounding areas.
+                Twin Cities Animal Rescue serves the Twin Cities
+                community and surrounding areas.
             </p>
         </section>
 
         <section>
             <h2>Office Hours</h2>
-
-                <p>
-                    Our team is available to respond to inquiries during business hours.
-                    Please use the form above to contact us.
-                </p>
-            
+            <p>
+                Our team is available to respond to inquiries during
+                business hours. Please use the form above to contact us.
+            </p>
         </section>
     </main>
 
@@ -86,6 +108,6 @@
         <p>&copy; 2026 Twin Cities Animal Rescue</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
-
 </html>
