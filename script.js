@@ -33,7 +33,6 @@ function loadInterest() {
 interestSelect.addEventListener("change", updateInterest);
 loadInterest();
 
-// Contact form validation
 const contactForm = document.getElementById("contact-form");
 
 function showError(fieldId, message) {
